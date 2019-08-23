@@ -5,7 +5,9 @@ class Home extends React.Component {
     render() {
         return (
             <div className="page-wraper app-page sidemenu-show sidemenu-collapse sidemenu-none"> 
-              <Main/>
+              <Main>
+                this is home
+              </Main>
             </div>
         )
     }

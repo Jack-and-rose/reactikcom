@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Children } from 'react';
 import { DatePicker } from 'antd';
+import Home from '@pages/home.jsx';
+import Login from '@pages/login.jsx';
+import Loginout from '@pages/loginout.jsx';
+import Testrouter from '@pages/testrouter.jsx';
 import MyHeader from '@app/layouts/topHeader.jsx';
 import MySiderMenu from '@app/layouts/siderMenu.jsx';
 import Foot from '@app/layouts/foot.jsx';
@@ -20,6 +24,7 @@ class Main extends React.Component {
         });
       };
     render() {
+        const {children} = this.props;
         return (
             <div className="page-wraper app-page sidemenu-show sidemenu-collapse sidemenu-none"> 
                 <Layout className="main-body">
@@ -35,8 +40,9 @@ class Main extends React.Component {
                         </Sider>
                         <Layout>
                             <Content>
-                            {/* <Route path="/" exact component={Index} /> */}
+                                {children}
                             </Content>
+                            
                             <Footer>
                                 <Foot></Foot>
                             </Footer>

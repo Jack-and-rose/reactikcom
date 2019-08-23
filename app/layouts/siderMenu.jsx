@@ -6,8 +6,6 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Switch,
-  Redirect
 } from "react-router-dom";
 
 class MySubMenu extends React.Component {
@@ -21,16 +19,16 @@ class MySubMenu extends React.Component {
           theme="light"
         >
           <Menu.Item key="1">
-            <Icon type="pie-chart" />
-            <Link to="/home"><span>首页</span></Link>
+            <Link to="/home"><Icon type="pie-chart" /><span>首页</span></Link>
           </Menu.Item>
           <Menu.Item key="2">
-            <Icon type="desktop" />
-            <Link to="/login"><span>登录</span></Link>
+            <Link to="/login"><Icon type="desktop" /><span>登录</span></Link>
           </Menu.Item>
           <Menu.Item key="3">
-            <Icon type="inbox" />
-            <span>Option 3</span>
+          <Link to="/loginout"><Icon type="desktop" /><span>退出登录</span></Link>
+          </Menu.Item>
+          <Menu.Item key="4">
+          <Link to="/testrouter"><Icon type="desktop" /><span>测试路由</span></Link>
           </Menu.Item>
           <SubMenu
             key="sub1"
@@ -67,5 +65,4 @@ class MySubMenu extends React.Component {
     );
   }
 }
-
 export default MySubMenu

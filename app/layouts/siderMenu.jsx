@@ -31,18 +31,30 @@ class MySubMenu extends React.Component {
           <Link to="/testrouter"><Icon type="desktop" /><span>测试路由</span></Link>
           </Menu.Item>
           <SubMenu
-            key="sub1"
+            key="blackHoleSys"
             title={
               <span>
                 <Icon type="mail" />
-                <span>Navigation One</span>
+                <span>黑洞系统</span>
               </span>
             }
           >
-            <Menu.Item key="5">Option 5</Menu.Item>
-            <Menu.Item key="6">Option 6</Menu.Item>
-            <Menu.Item key="7">Option 7</Menu.Item>
-            <Menu.Item key="8">Option 8</Menu.Item>
+            <Menu.Item key="5"><Link to="/blackHoleSys/traction"><Icon type="desktop" /><span>黑洞IP列表</span></Link></Menu.Item>
+            <Menu.Item key="6"><Link to="/blackHoleSys/monitor"><Icon type="desktop" /><span>线路流量监控</span></Link></Menu.Item>
+            <Menu.Item key="7"><Link to="/blackHoleSys/ipscanner"><Icon type="desktop" /><span>IP浏览监控</span></Link></Menu.Item>
+          </SubMenu>
+          <SubMenu
+            key="router_in"
+            title={
+              <span>
+                <Icon type="mail" />
+                <span>路由管理(入向流量)</span>
+              </span>
+            }
+          >
+            <Menu.Item key="5"><Link to="/router_in/routermanager"><Icon type="desktop" /><span>路由器管理</span></Link></Menu.Item>
+            <Menu.Item key="6"><Link to="/router_in/communitymanager"><Icon type="desktop" /><span>团体属性</span></Link></Menu.Item>
+            <Menu.Item key="7"><Link to="/router_in/communitygroup"><Icon type="desktop" /><span>分组管理</span></Link></Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub2"

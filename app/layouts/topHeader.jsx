@@ -3,8 +3,12 @@ import { Icon, Avatar,Badge, Row} from 'antd';
 
 class MyHeader extends React.Component {
   render() {
+    
     return (
-      <Row>
+      <div>
+        <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
+            <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
+        </Button>
            <Avatar icon="user" />
           <Icon type="smile" rotate={180} />
           <a href="#">
@@ -12,7 +16,7 @@ class MyHeader extends React.Component {
             <Icon type="notification" />
             </Badge>
         </a> 
-      </Row>
+      </div>
     );
   }
 }

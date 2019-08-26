@@ -1,16 +1,13 @@
 import React from 'react';
-import Main from '@layouts/main.jsx';
-const elem = <h1>dsada</h1>;
-class Home extends React.Component {
+
+class Monitor extends React.Component {
     render() {
         return (
             <div className="page-wraper app-page sidemenu-show sidemenu-collapse sidemenu-none"> 
-              <Main>
-                {elem}
-              </Main>
+              hello  monitor
             </div>
         )
     }
 }
 
-export default Home;
+export default Monitor;

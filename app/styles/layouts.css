@@ -1,4 +1,22 @@
-.main-body {
+.page-wraper {
   height: 100%;
   width: 100%;
+}
+.sider-menu {
+  position: relative;
+}
+.sider-menu .toggleCollapsed {
+  position: absolute;
+  top: 40%;
+  right: -20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #40a9ff;
+  cursor: pointer;
+}
+.main {
+  padding: 0px 15px;
+}
+.main-body {
+  background: #FFF;
 }

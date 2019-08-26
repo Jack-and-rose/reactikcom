@@ -1,6 +1,7 @@
 import React, { Children } from 'react';
 import MyHeader from '@app/layouts/topHeader.jsx';
 import MySiderMenu from '@app/layouts/siderMenu.jsx';
+import MyBreadcrumb from '@app/layouts/breadcrumb.jsx';
 import Foot from '@app/layouts/foot.jsx';
 import '@styles/layouts.less';
 import { Layout,Breadcrumb, Icon,Button} from 'antd';
@@ -20,28 +21,30 @@ class Main extends React.Component {
     render() {
         const {children} = this.props;
         return (
-            <div className="page-wraper app-page sidemenu-show sidemenu-collapse sidemenu-none"> 
-                <Layout className="main-body">
+                <Layout className="page-wraper app-page sidemenu-show sidemenu-collapse sidemenu-none"> 
                     <Header className="main-header">
                         <MyHeader/>
-                        
                     </Header>
                     <Layout>
-                        <Sider collapsed={this.state.collapsed} collapsible="true" trigger={null} breakpoint='xs' theme="light"> 
+                        {/* <Foot/>
+                        <Sider className="main-sider" collapsed={this.state.collapsed} collapsible="true" trigger={null} breakpoint='xs' theme="light"> 
                             <MySiderMenu />
-                        </Sider>
+                        </Sider> */}
+                        <MySiderMenu />
                         <Layout>
-                            <Content>
-                               {children}
+                            <Content className="main">
+                                <MyBreadcrumb></MyBreadcrumb>
+                                <div className="main-body">
+                                    {children}
+                                </div>
+                               
                             </Content>
-                            <Footer>
+                            <Footer className="main-body">
                                 <Foot></Foot>
                             </Footer>
                         </Layout>
-                            
                     </Layout>
                 </Layout> 
-            </div>
         )
     }
 }

@@ -9,9 +9,21 @@ import {
 } from "react-router-dom";
 
 class MySubMenu extends React.Component {
+    state = {
+      collapsed: false,
+    };
+
+    toggleCollapsed = () => {
+      this.setState({
+          collapsed: !this.state.collapsed,
+      });
+    };
   render() {
     return (
-      <div className="main-sider-menu">
+      <Sider className="sider-menu" collapsed={this.state.collapsed} collapsible="true" trigger={null} breakpoint='xs' theme="light">
+        <span className="toggleCollapsed" type="primary" onClick={this.toggleCollapsed}  >
+            <Icon type={this.state.collapsed ? 'right-circle' : 'left-circle'} theme="filled" />
+        </span>
         <Menu
           defaultSelectedKeys={['1']}
           defaultOpenKeys={['sub1']}
@@ -20,15 +32,6 @@ class MySubMenu extends React.Component {
         >
           <Menu.Item key="1">
             <Link to="/home"><Icon type="pie-chart" /><span>首页</span></Link>
-          </Menu.Item>
-          <Menu.Item key="2">
-            <Link to="/login"><Icon type="desktop" /><span>登录</span></Link>
-          </Menu.Item>
-          <Menu.Item key="3">
-          <Link to="/loginout"><Icon type="desktop" /><span>退出登录</span></Link>
-          </Menu.Item>
-          <Menu.Item key="4">
-          <Link to="/testrouter"><Icon type="desktop" /><span>测试路由</span></Link>
           </Menu.Item>
           <SubMenu
             key="blackHoleSys"
@@ -56,6 +59,17 @@ class MySubMenu extends React.Component {
             <Menu.Item key="6"><Link to="/router_in/communitymanager"><Icon type="desktop" /><span>团体属性</span></Link></Menu.Item>
             <Menu.Item key="7"><Link to="/router_in/communitygroup"><Icon type="desktop" /><span>分组管理</span></Link></Menu.Item>
           </SubMenu>
+          <Menu.Item key="2">
+            <Link to="/login"><Icon type="desktop" /><span>登录</span></Link>
+          </Menu.Item>
+          <Menu.Item key="3">
+          <Link to="/loginout"><Icon type="desktop" /><span>退出登录</span></Link>
+          </Menu.Item>
+          <Menu.Item key="4">
+          <Link to="/testrouter"><Icon type="desktop" /><span>测试路由</span></Link>
+          </Menu.Item>
+          
+          
           <SubMenu
             key="sub2"
             title={
@@ -73,7 +87,7 @@ class MySubMenu extends React.Component {
             </SubMenu>
           </SubMenu>
         </Menu>
-      </div>
+      </Sider>
     );
   }
 }

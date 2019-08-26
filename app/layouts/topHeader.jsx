@@ -5,10 +5,7 @@ class MyHeader extends React.Component {
   render() {
     
     return (
-      <div>
-        <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-            <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-        </Button>
+      <div className="main-header">
            <Avatar icon="user" />
           <Icon type="smile" rotate={180} />
           <a href="#">

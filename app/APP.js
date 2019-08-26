@@ -44,14 +44,6 @@ class App extends React.Component {
     render() {
         return (
             <BrowserRouter baseName="http://localhost:9000">
-                {/*  <div>
-                    {
-                        routes.map((route,index)=>(
-                            <Route key={index} extat={route.extat}  path={route.path} component={route.component} />
-                        ))
-                    }
-                         
-                </div> */}
                 <Switch>
                     <Route key="home" exact path="/home" component={Home} />
                     <Route key="mian" exact path="/" component={Main} />

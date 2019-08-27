@@ -1,16 +1,16 @@
-.ant-switch {
+.form-filed .ant-switch {
   height: 32px;
 }
-.ant-switch::after {
+.form-filed .ant-switch::after {
   height: 25px;
   width: 25px;
   top: 3px;
 }
-.ant-switch-inner {
+.form-filed .ant-switch-inner {
   margin-right: 6px;
   margin-left: 28px;
 }
-.ant-switch-checked .ant-switch-inner {
+.form-filed .ant-switch-checked .ant-switch-inner {
   margin-right: 31px;
   margin-left: 11px;
 }

@@ -3,7 +3,7 @@ import MyHeader from '@app/layouts/topHeader.jsx';
 import MySiderMenu from '@app/layouts/siderMenu.jsx';
 import MyBreadcrumb from '@app/layouts/breadcrumb.jsx';
 import Foot from '@app/layouts/foot.jsx';
-import '@styles/layouts.less';
+import '@styles/app.less';
 import { Layout,Breadcrumb, Icon,Button} from 'antd';
 
 const {Header,Footer,Sider,Content} = Layout;
@@ -26,10 +26,6 @@ class Main extends React.Component {
                         <MyHeader/>
                     </Header>
                     <Layout>
-                        {/* <Foot/>
-                        <Sider className="main-sider" collapsed={this.state.collapsed} collapsible="true" trigger={null} breakpoint='xs' theme="light"> 
-                            <MySiderMenu />
-                        </Sider> */}
                         <MySiderMenu />
                         <Layout>
                             {/* <Layout className="main">
@@ -38,16 +34,14 @@ class Main extends React.Component {
                                     {children}
                                 </div>
                             </Layout> */}
-                            <Content className="main">
+                            <section className="main">
                                 <MyBreadcrumb></MyBreadcrumb>
                                 <div className="main-body">
                                     {children}
                                 </div>
-                               
-                            </Content>
-                            <Footer className="main-body">
-                                <Foot></Foot>
-                            </Footer>
+                                
+                            </section>
+                            <Foot></Foot>
                         </Layout>
                     </Layout>
                 </Layout> 

@@ -13,7 +13,8 @@ router.use("/traction",function (req,res) {
                 'circuit__uuid__exact|1': ['侯旗-黑洞测试线路10G','侯旗-黑洞测试线路100M','线路8G---Roger'],
                 'ip|1':['192.168.1.2','192.168.1.3','192.168.1.5'],
                 'startTime':Mock.Random.date(),
-                'des':Mock.Random.sentence( 7, 20 )
+                'des':Mock.Random.sentence( 7, 20 ),
+                'option|1':['查看','修改']
             }]
         }
     );

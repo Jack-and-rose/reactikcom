@@ -21,16 +21,30 @@ class Traction extends React.Component {
                 {
                     title: '黑洞开始时间',
                     dataIndex: 'startTime',
-                    sorter: true
+                    sorter: true,
+                    width:150
                 },
                 {
                     title: '备注',
                     dataIndex: 'des'
                 },
+                {
+                    title: '操作',
+                    dataIndex: 'option',
+                    render:(text,record) => (
+                        <span>
+                            <Button>{text}</Button>
+                        </span>
+                        )
+                }
             ],
-            data : []
-        }
-        
+            lists : [],
+            selectdRowKeys:[]
+        };
+        this.fetchDate();
+      }
+      // 获取列表数据
+      fetchDate =()=>{
         axios.get('/api/qy/traction',{
             params: {
                 ID: 12345
@@ -38,10 +52,20 @@ class Traction extends React.Component {
         })
         .then(res=>{
             console.log(res.data.list)
-            this.setState({data:res.data.list})
+            this.setState({lists:res.data.list})
         })
-      }
+    };
+
+    onSelectChange = (selectdRowKeys)=>{
+        console.log(selectdRowKeys);
+        this.setState({selectdRowKeys})
+    }
     render() {
+        const {columns,lists,selectdRowKeys} = this.state;
+        const rowSelection = {
+            selectdRowKeys,
+            onChange:this.onSelectChange 
+        }
         return (
              <div>
                  <Tabs tabPosition="top">
@@ -62,13 +86,14 @@ class Traction extends React.Component {
                                 unCheckedChildren="自动刷新关闭"
                                 defaultChecked
                                 />
+                                <span className="switch-tip">关闭自动刷新就能够多选</span>
                             </Col>
                             <Col span={8}>
                                 <Button type="primary">增加 黑洞IP列表 </Button>
                             </Col>
                         </Row>
                         {/* 表格 */}
-                        <Table rowKey={record => record.key} columns={this.state.columns} dataSource={this.state.data} />
+                        <Table className="table-list" rowKey={record => record.key} rowSelection={rowSelection} columns={columns} dataSource={lists} />
                     </TabPane>
                     <TabPane tab="台湾机房" key="2">
                         Content of Tab 2

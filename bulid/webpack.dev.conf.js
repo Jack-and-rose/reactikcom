@@ -3,7 +3,7 @@ const common = require('./webpack.base.conf.js');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         // 默认 localhost
         host: 'localhost',

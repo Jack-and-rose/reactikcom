@@ -94,6 +94,7 @@ class Traction extends React.Component {
                         </Row>
                         {/* 表格 */}
                         <Table className="table-list" rowKey={record => record.key} rowSelection={rowSelection} columns={columns} dataSource={lists} />
+                        
                     </TabPane>
                     <TabPane tab="台湾机房" key="2">
                         Content of Tab 2

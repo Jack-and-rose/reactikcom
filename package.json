@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --config bulid/webpack.dev.conf.js",
-    "build": "webpack --config bulid/webpack.prod.conf.js"
+    "build": "webpack --config bulid/webpack.prod.conf.js",
+    "mock": "node ./mock/server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "ant-design-pro": "^2.1.1",
     "antd": "^3.11.6",
+    "axios": "^0.19.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-import": "^1.11.0",
@@ -21,6 +23,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^6.1.0",
+    "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-0": "^6.24.1",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^2.1.0",
@@ -45,6 +48,8 @@
     "webpack-merge": "^4.1.5"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "mockjs": "^1.0.1-beta3",
     "yarn": "^1.17.3"
   }
 }

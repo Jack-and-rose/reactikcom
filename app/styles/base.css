@@ -1,11 +1,5 @@
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333;
-}
+
 .page-wraper {
-  background: linear-gradient(to right, #58a 20%, #fb3 60%);
   height: 100%;
   width: 100%;
 }
@@ -21,15 +15,9 @@ body {
   color: #40a9ff;
   cursor: pointer;
 }
-.main-breadcrumb {
-  padding: 20px 10px;
-}
 .main {
   padding: 0px 15px;
 }
 .main-body {
   background: #FFF;
-}
-.form-filed {
-  padding: 20px 10px;
 }

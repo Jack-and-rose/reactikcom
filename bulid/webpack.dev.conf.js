@@ -20,7 +20,8 @@ module.exports = merge(common, {
         proxy: {
             "/api":{
                 changeOrigin: true,
-                target: "https://www.easy-mock.com/mock/5c24adb39a96a934e48de313"
+                pathRewrite: {'^/api' : ''}, // 可转换
+                target: "http://localhost:3001/admin"
             },
             "/node": {
                 changeOrigin: true,

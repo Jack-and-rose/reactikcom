@@ -6,3 +6,16 @@
   width: 25px;
   top: 3px;
 }
+.ant-switch-inner {
+  margin-right: 6px;
+  margin-left: 28px;
+}
+.ant-switch-checked .ant-switch-inner {
+  margin-right: 31px;
+  margin-left: 11px;
+}
+.ant-pagination-item-link .anticon.anticon-left,
+.ant-pagination-item-link .anticon.anticon-right {
+  position: relative;
+  top: 10px;
+}

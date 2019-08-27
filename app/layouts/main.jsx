@@ -32,6 +32,12 @@ class Main extends React.Component {
                         </Sider> */}
                         <MySiderMenu />
                         <Layout>
+                            {/* <Layout className="main">
+                            <MyBreadcrumb></MyBreadcrumb>
+                                <div className="main-body">
+                                    {children}
+                                </div>
+                            </Layout> */}
                             <Content className="main">
                                 <MyBreadcrumb></MyBreadcrumb>
                                 <div className="main-body">

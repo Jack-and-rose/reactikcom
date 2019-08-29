@@ -42,9 +42,9 @@ class MySubMenu extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="5"><Link to="/blackHoleSys/traction"><Icon type="desktop" /><span>黑洞IP列表</span></Link></Menu.Item>
-            <Menu.Item key="6"><Link to="/blackHoleSys/monitor"><Icon type="desktop" /><span>线路流量监控</span></Link></Menu.Item>
-            <Menu.Item key="7"><Link to="/blackHoleSys/ipscanner"><Icon type="desktop" /><span>IP浏览监控</span></Link></Menu.Item>
+            <Menu.Item key="traction"><Link to="/blackHoleSys/traction"><Icon type="desktop" /><span>黑洞IP列表</span></Link></Menu.Item>
+            <Menu.Item key="monitor"><Link to="/blackHoleSys/monitor"><Icon type="desktop" /><span>线路流量监控</span></Link></Menu.Item>
+            <Menu.Item key="ipscanner"><Link to="/blackHoleSys/ipscanner"><Icon type="desktop" /><span>IP浏览监控</span></Link></Menu.Item>
           </SubMenu>
           <SubMenu
             key="router_in"
@@ -55,9 +55,9 @@ class MySubMenu extends React.Component {
               </span>
             }
           >
-            <Menu.Item key="5"><Link to="/router_in/routermanager"><Icon type="desktop" /><span>路由器管理</span></Link></Menu.Item>
-            <Menu.Item key="6"><Link to="/router_in/communitymanager"><Icon type="desktop" /><span>团体属性</span></Link></Menu.Item>
-            <Menu.Item key="7"><Link to="/router_in/communitygroup"><Icon type="desktop" /><span>分组管理</span></Link></Menu.Item>
+            <Menu.Item key="routermanager5"><Link to="/router_in/routermanager"><Icon type="desktop" /><span>路由器管理</span></Link></Menu.Item>
+            <Menu.Item key="routermanager"><Link to="/router_in/routermanager"><Icon type="desktop" /><span>团体属性</span></Link></Menu.Item>
+            <Menu.Item key="communitygroup"><Link to="/router_in/communitygroup"><Icon type="desktop" /><span>分组管理</span></Link></Menu.Item>
           </SubMenu>
           <Menu.Item key="2">
             <Link to="/login"><Icon type="desktop" /><span>登录</span></Link>

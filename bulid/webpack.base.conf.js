@@ -37,7 +37,8 @@ module.exports = {
             '@reg': path.join(__dirname, '../app/configs/regular.config.js'),
             '@images': path.join(__dirname, '../app/images'),
             '@styles': path.join(__dirname, '../app/styles'),
-            '@layouts': path.join(__dirname, '../app/layouts'),
+            '@redux': path.join(__dirname, '../app/redux'),
+            '@layouts': path.join(__dirname, '../app/components/layouts'),
             '@pages': path.join(__dirname, '../app/pages'),
         }
     },

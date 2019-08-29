@@ -6,39 +6,7 @@ import Loginout from '@pages/loginout.jsx';
 import BlackHoleSys from '@pages/blackHoleSys/index.js';
 import RouterIn from '@pages/router_in/index.js';
 //import { Router } from "react-router";
-import { BrowserRouter,Router, Route,Link,Switch,Redirect } from 'react-router-dom'
-
-const routes = [
-    {
-        path:"/",
-        extat: true,
-        component: Home,
-
-    },
-    {
-        path:"/login",
-        extat: false,
-        component: Login,
-
-    }
-    ,{
-        path:"/home",
-        extat: false,
-        component: Home,
-
-    }
-    ,{
-        path:"/testrouter",
-        extat: false,
-        component: Main,
-
-    }
-    ,{
-        path:"/loginout",
-        extat: false,
-        component: Loginout,
-    }
-]
+import { BrowserRouter,Router, Route,Link,Switch,Redirect } from 'react-router-dom';
 
 class App extends React.Component {
     render() {

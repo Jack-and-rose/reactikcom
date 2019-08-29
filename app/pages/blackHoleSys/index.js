@@ -13,8 +13,8 @@ class BlackHoleSys extends React.Component {
               <Main>
                 <Switch>
                   {/* <Route exact path="/blackHoleSys" component={Traction} /> */}
-                  <Route exact path="/blackHoleSys/traction" component={Traction} />
-                  <Route exact path="/blackHoleSys/monitor" component={Monitor} />
+                  <Route path="/blackHoleSys/traction" component={Traction} />
+                  <Route path="/blackHoleSys/monitor" component={Monitor} />
                 </Switch> 
               </Main>
             </div>

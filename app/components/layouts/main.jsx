@@ -5,6 +5,8 @@ import MyBreadcrumb from '@layouts/breadcrumb.jsx';
 import Foot from '@layouts/foot.jsx';
 import '@styles/app.less';
 import { Layout,Breadcrumb, Icon,Button,Tabs,Row,Col,Input,Select,Switch,Table} from 'antd';
+import store from '@redux/store';
+import {changeRoomUid} from '@redux/actions';
 
 const {Header,Footer,Sider,Content} = Layout;
 const {TabPane} = Tabs;
@@ -12,15 +14,7 @@ class Main extends React.Component {
     constructor(props){
         super(props);
     };
-    state = {
-        collapsed: false,
-      };
     
-    toggleCollapsed = (() => {
-    this.setState({
-        collapsed: !this.state.collapsed,
-    });
-    });
     onClickTab = ((key)=>{
         console.log(key)
     });

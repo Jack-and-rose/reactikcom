@@ -1,14 +1,15 @@
 import * as ActionTypes from '../actions/ActionTypes';
 
-export const toggleSiderMenu = (collapsed) => {
+//
+export const toggleSiderMenu = (id,collapsed) => {
   return {
     type: ActionTypes.COLLAPSED_SIADER_MENU,
-    id:'root',
+    id,
     collapsed
   }
 }
 
-export const changeRoomId = (room__uuid__exact) => {
+export const changeRoomUid = (room__uuid__exact) => {
  return {
   type: ActionTypes.ROOM_UUID_EXACT,
   id,

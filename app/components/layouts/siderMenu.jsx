@@ -1,5 +1,7 @@
 import React from 'react';
 import { Layout,Menu, Icon, Button } from 'antd';
+import store from '@redux/store';
+import {changeRoomUid} from '@redux/actions';
 const {Header,Footer,Sider,Content} = Layout;
 const { SubMenu } = Menu;
 import {
@@ -9,15 +11,19 @@ import {
 } from "react-router-dom";
 
 class MySubMenu extends React.Component {
-    state = {
-      collapsed: false,
-    };
+  state = {
+    collapsed: store.getState().sidermenu.collapsed,
+  };
 
-    toggleCollapsed = () => {
-      this.setState({
-          collapsed: !this.state.collapsed,
-      });
-    };
+  toggleCollapsed = (() => {
+  this.setState({
+      collapsed: !this.state.collapsed,
+  });
+  // store.dispatch({type:'collapsed_sider',collapsed:this.state.collapsed});
+  store.dispatch(changeRoomUid(this.state.collapsed));
+    console.log('toggleCollapsed');
+    console.log(store.getState());
+  });
   render() {
     return (
       <Sider className="sider-menu" collapsed={this.state.collapsed} collapsible="true" trigger={null} breakpoint='xs' theme="light">

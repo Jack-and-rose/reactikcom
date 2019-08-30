@@ -1,7 +1,7 @@
 import sidermenu from './sidermenu';
 import { combineReducers } from 'redux';
-import room from './room'
+import changeRoomUid from './changeRoomUid'
 export default combineReducers({
   sidermenu,
-  room
+  changeRoomUid
 })

@@ -13,10 +13,11 @@ class App extends React.Component {
         return (
             <BrowserRouter baseName="http://localhost:9000">
                 <Switch>
-                    <Route key="home" exact path="/home" component={Home} />
-                    <Route key="mian" exact path="/" component={Main} />
-                    <Route key="login" exact path="/login" component={Login} />
+                <Route key="login" exact path="/login" component={Login} />
                     <Route key="loginout" exact path="/loginout" component={Loginout} />
+                    <Route key="home" exact path="/home" component={Home} />
+                    {/* <AuthorizedRoute path="/layout" component={Layout} /> */}
+                    <Route key="mian" exact path="/" component={Main} />
                     <Route path="/blackHoleSys" component={BlackHoleSys} />
                     <Route path="/router_in" component={RouterIn} />
                     <Redirect to="/" />

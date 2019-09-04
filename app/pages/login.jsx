@@ -2,14 +2,23 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import '@styles/login.less';
 class Login extends React.Component {
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
-  };
+  constructor(props) {
+    super(props);
+    this.isLogging = false;
+  }
+  handleSubmit = (e) => {
+      e.preventDefault();
+      this.props.form.validateFields((err, values) => {
+          if (!err) {
+              this.isLogging = true;
+              login(values).then(() => {
+                  this.isLogging = false;
+                  let toPath = this.props.toPath === '' ?  '/layout/home' :  this.props.toPath
+                  this.props.history.push(toPath);
+              })
+          }
+      });
+  }
 
   render() {
     return (
@@ -41,5 +50,14 @@ class Login extends React.Component {
   }
 }
 
+const WrappedNormalLoginForm = Form.create()(Login);
+
+// const loginState = ({ loginState }) => ({
+//     toPath: loginState.toPath
+// })
+
+// export default withRouter(connect(
+//         loginState
+// )(WrappedNormalLoginForm))
 
 export default Login;

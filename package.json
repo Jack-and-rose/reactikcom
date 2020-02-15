@@ -50,6 +50,6 @@
   "dependencies": {
     "express": "^4.17.1",
     "mockjs": "^1.0.1-beta3",
-    "yarn": "^1.17.3"
+    "yarn": "^1.22.0"
   }
 }
